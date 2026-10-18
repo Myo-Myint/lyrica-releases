@@ -1,6 +1,7 @@
 # Lyrica
 
-Beautiful, time-synced lyrics for YouTube Music on your Mac: word-by-word highlighting,
+Beautiful, time-synced lyrics for **Spotify, Apple Music and YouTube Music** on your Mac:
+word-by-word highlighting,
 full screen on a big display, a floating mini bar, romanization and translation, and lyrics
 that line themselves up with the song.
 
@@ -24,10 +25,14 @@ Free. For macOS on Apple Silicon (M1 and later) and Intel Macs.
       click **Open Anyway**, then confirm.
 
    After that, Lyrica opens normally.
-4. **Add the browser extension** _Lyrica Bridge_. Its Chrome Web Store listing is in review
-   (link coming soon); until then Lyrica's Setup Guide walks you through loading it. It works
-   in **Chrome, Edge, Brave, Arc, Opera and Vivaldi**, which all install Chrome extensions.
-5. Play a song on [music.youtube.com](https://music.youtube.com). Lyrics appear in Lyrica.
+4. **Spotify or Apple Music:** nothing else to install. Play a song; the first time, macOS
+   asks to let Lyrica see Spotify or Music — click **Allow**.
+5. **YouTube Music:** add the browser extension _Lyrica Bridge_. Its Chrome Web Store
+   listing is in review (link coming soon); until then Lyrica's Setup Guide walks you
+   through loading it. It works in **Chrome, Edge, Brave, Arc, Opera and Vivaldi**.
+
+Lyrics appear as soon as a song plays. With several players open, Lyrica follows the one
+that started playing most recently.
 
 ## Using it
 
@@ -41,6 +46,9 @@ Free. For macOS on Apple Silicon (M1 and later) and Intel Macs.
 | **Text size** | **+** / **−** (or menu-bar icon → *Lyrics*) |
 | **Font** (system, rounded, serif) | menu-bar icon → *Lyrics* |
 | **Share a line** as an image | right-click the line, or **S** for the current one |
+| **Wrong lyrics?** | ↻ in the top bar (or click the source name) to pick another version |
+| **Lyrics in the menu bar** | menu-bar icon → *Lyrics in Menu Bar* |
+| **Choose which apps to follow** | menu-bar icon → *Follow* |
 | **Lyrics timing off?** | − / + in the top bar nudges this song; ⌥ − / + adjusts for your headphones (e.g. AirPods) |
 | **No lyrics?** | *Sync it yourself*: paste the words and tap Space as each line starts |
 
@@ -58,5 +66,6 @@ sources were tried, which makes most problems quick to find.
 ## Privacy
 
 See [PRIVACY.md](PRIVACY.md). In short: nothing about your listening leaves your Mac except
-title/artist lookups to lyrics services, and lyric text to Google Translate only while
+title/artist lookups to lyrics services (and Apple's catalogue, for Apple Music covers),
+and lyric text to Google Translate only while
 romanization or translation is switched on.

@@ -28,6 +28,8 @@ To find lyrics, Lyrica sends the track's **title, artist, album and duration** t
 - QQ Music's public lyrics search,
 
 and loads artwork from Google's image servers (the same images YouTube Music shows).
+For songs playing in Apple Music, the cover may be looked up by title and artist in Apple's
+public catalogue search (`itunes.apple.com`) when the Music app doesn't provide it.
 
 **Romanization and translation** are off until you switch them on (the **T** key or the
 menu-bar icon → *Lyrics*). While on, the song's lyric text is sent to Google Translate's
