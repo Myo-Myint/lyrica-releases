@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lyrica — synced lyrics for YouTube Music on your Mac</title>
+    <meta name="description" content="Free Mac app that shows beautiful, word-by-word synced lyrics for whatever you play on YouTube Music — in a window, full screen on a big display, or a floating mini bar." />
+    <meta property="og:title" content="Lyrica — synced lyrics for YouTube Music" />
+    <meta property="og:description" content="Word-by-word lyrics for YouTube Music on your Mac. Free." />
+    <meta property="og:image" content="https://myo-myint.github.io/lyrica-releases/poster.jpg" />
+    <link rel="icon" href="icon.png" />
+    <style>
+      :root {
+        --bg: #0b0b10;
+        --fg: #f5f5f7;
+        --dim: rgba(245, 245, 247, 0.66);
+        --faint: rgba(245, 245, 247, 0.12);
+        --c1: #c2552a;
+        --c2: #2c6a9a;
+        --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Inter, system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font);
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(70% 50% at 15% 0%, color-mix(in oklab, var(--c1) 55%, transparent), transparent 70%),
+          radial-gradient(60% 50% at 90% 10%, color-mix(in oklab, var(--c2) 55%, transparent), transparent 70%),
+          var(--bg);
+        background-repeat: no-repeat;
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      .brand img {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+      }
+      nav a {
+        color: var(--dim);
+        text-decoration: none;
+        font-size: 14px;
+        margin-left: 20px;
+      }
+      nav a:hover {
+        color: var(--fg);
+      }
+      .hero {
+        text-align: center;
+        padding: 56px 0 36px;
+      }
+      h1 {
+        font-size: clamp(40px, 7vw, 76px);
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+        margin: 0 0 18px;
+      }
+      h1 .sung {
+        background: linear-gradient(90deg, #fff 55%, rgba(255, 255, 255, 0.38) 75%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lede {
+        font-size: clamp(17px, 2.2vw, 21px);
+        color: var(--dim);
+        max-width: 640px;
+        margin: 0 auto 32px;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 22px;
+        border-radius: 999px;
+        font-weight: 650;
+        font-size: 15px;
+        text-decoration: none;
+        border: 1px solid var(--faint);
+        background: rgba(255, 255, 255, 0.06);
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-1px);
+      }
+      .btn.primary {
+        background: #fff;
+        color: #0b0b10;
+        border-color: #fff;
+      }
+      .btn.primary:hover {
+        background: #e9e9ee;
+      }
+      .fine {
+        color: var(--dim);
+        font-size: 13px;
+        margin-top: 14px;
+      }
+      .video {
+        margin: 40px auto 0;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--faint);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        aspect-ratio: 16 / 10;
+        background: #000;
+      }
+      .video video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      section {
+        padding: 72px 0 0;
+      }
+      h2 {
+        font-size: clamp(28px, 4vw, 40px);
+        letter-spacing: -0.025em;
+        line-height: 1.12;
+        margin: 0 0 12px;
+      }
+      .sub {
+        color: var(--dim);
+        font-size: 17px;
+        max-width: 620px;
+        margin: 0 0 32px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        border: 1px solid var(--faint);
+        background: rgba(255, 255, 255, 0.035);
+        border-radius: 16px;
+        padding: 22px;
+      }
+      .card h3 {
+        margin: 0 0 6px;
+        font-size: 17px;
+        letter-spacing: -0.01em;
+      }
+      .card p {
+        margin: 0;
+        color: var(--dim);
+        font-size: 15px;
+      }
+      kbd {
+        font-family: var(--font);
+        font-size: 12px;
+        padding: 1px 6px;
+        border-radius: 5px;
+        border: 1px solid var(--faint);
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+      }
+      .shots {
+        display: flex;
+        gap: 14px;
+      }
+      .shots img {
+        width: 50%;
+        min-width: 0;
+        border-radius: 14px;
+        border: 1px solid var(--faint);
+      }
+      .mini img {
+        width: 100%;
+        max-width: 760px;
+        display: block;
+        filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.5));
+      }
+      .share img {
+        width: 100%;
+        max-width: 360px;
+        display: block;
+        margin-left: auto;
+        border-radius: 14px;
+        border: 1px solid var(--faint);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      }
+      ol.steps {
+        counter-reset: s;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      ol.steps li {
+        counter-increment: s;
+        border: 1px solid var(--faint);
+        border-radius: 16px;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.035);
+        color: var(--dim);
+        font-size: 15px;
+      }
+      ol.steps li::before {
+        content: counter(s);
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #fff;
+        color: #0b0b10;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      ol.steps b {
+        color: var(--fg);
+      }
+      footer {
+        margin-top: 88px;
+        padding: 28px 0 48px;
+        border-top: 1px solid var(--faint);
+        color: var(--dim);
+        font-size: 14px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      footer a {
+        color: var(--dim);
+      }
+      @media (max-width: 760px) {
+        .split {
+          grid-template-columns: 1fr;
+        }
+        .share img {
+          margin: 0 auto;
+        }
+        nav a:not(.btn) {
+          display: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="./"><img src="icon.png" alt="" />Lyrica</a>
+        <nav>
+          <a href="#features">Features</a>
+          <a href="#install">Install</a>
+          <a href="https://github.com/Myo-Myint/lyrica-releases/issues/new/choose">Report a bug</a>
+        </nav>
+      </header>
+
+      <div class="hero">
+        <h1>Lyrics that <span class="sung">sing along</span></h1>
+        <p class="lede">
+          Lyrica is a free Mac app that shows time-synced lyrics for whatever you play on YouTube Music, word by word, in a window, a floating mini bar,
+          or full screen on your biggest display.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/Myo-Myint/lyrica-releases/releases/latest">Download for Mac</a>
+          <a class="btn" href="#install">How to install</a>
+        </div>
+        <p class="fine">Free · macOS on Apple Silicon and Intel · works with Chrome, Edge, Brave and Arc</p>
+        <div class="video">
+          <video src="demo.mp4" poster="poster.jpg" autoplay muted loop playsinline aria-label="Lyrica highlighting lyrics word by word, then switching to cover view"></video>
+        </div>
+      </div>
+
+      <section id="features">
+        <h2>Made to be watched</h2>
+        <p class="sub">The lyrics are the show. Everything else fades away until you move the mouse.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Word by word</h3>
+            <p>Each word fills in as it's sung, from word-timed lyrics where they exist and carefully estimated timing where they don't.</p>
+          </div>
+          <div class="card">
+            <h3>Lines up by itself</h3>
+            <p>Lyrica listens to when the singing starts and nudges lyrics into place. Headphones like AirPods get their own delay setting.</p>
+          </div>
+          <div class="card">
+            <h3>Big-screen mode</h3>
+            <p>Send it to any display and press <kbd>F</kbd>. Click the artwork for cover view. Play, pause and skip without touching the browser.</p>
+          </div>
+          <div class="card">
+            <h3>Lyrics from everywhere</h3>
+            <p>YouTube Music's own lyrics first, then LRCLIB and QQ Music. Still nothing? Sync it yourself by tapping along.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="split">
+          <div>
+            <h2>Sing along in any language</h2>
+            <p class="sub">
+              Press <kbd>T</kbd> for a second line under each lyric: romanization for Korean, Japanese, Chinese and other scripts, or a translation into your
+              language.
+            </p>
+          </div>
+          <div class="shots">
+            <img src="romanized.jpg" alt="Korean lyrics with romanization under each line" loading="lazy" />
+            <img src="translated.jpg" alt="Korean lyrics with English translation under each line" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="mini">
+        <h2>A mini bar that floats over everything</h2>
+        <p class="sub">Working on something else? Press <kbd>M</kbd> or <kbd>⌥⌘L</kbd> for a slim strip with just the current line, above every window and Space.</p>
+        <img src="mini.png" alt="Lyrica's floating mini lyrics bar" loading="lazy" />
+      </section>
+
+      <section>
+        <div class="split share">
+          <div>
+            <h2>Share the line that got you</h2>
+            <p class="sub">Right-click any line, or press <kbd>S</kbd>, for a lyric card with the song's artwork, ready to paste into a message or a story.</p>
+          </div>
+          <img src="share.jpg" alt="A shared lyric card" loading="lazy" />
+        </div>
+      </section>
+
+      <section id="install">
+        <h2>Install in a minute</h2>
+        <p class="sub">Lyrica has two parts: the Mac app, and a small browser extension that tells it what YouTube Music is playing.</p>
+        <ol class="steps">
+          <li>
+            <b>Download Lyrica</b> from the <a href="https://github.com/Myo-Myint/lyrica-releases/releases/latest">latest release</a>: the
+            <b>arm64</b> file for Apple Silicon Macs (M1 and later), <b>x64</b> for Intel Macs. Drag it into Applications.
+          </li>
+          <li>
+            <b>First launch only:</b> this early version isn't notarized by Apple yet. Open it once, then go to System Settings → Privacy &amp; Security and
+            click <b>Open Anyway</b>.
+          </li>
+          <li>
+            <b>Add the Lyrica Bridge extension.</b> The Chrome Web Store listing is in review; until then Lyrica's Setup Guide walks you through loading it.
+            It works in Chrome, Edge, Brave, Arc and other Chromium browsers.
+          </li>
+          <li><b>Play a song</b> on music.youtube.com. The lyrics appear in Lyrica.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Private by design</h2>
+        <p class="sub">
+          No accounts, analytics or ads. The extension talks only to the app on your own Mac. Song titles go to lyrics services to find lyrics, and lyric
+          text goes to Google Translate only while romanization or translation is switched on.
+          <a href="https://github.com/Myo-Myint/lyrica-releases/blob/main/PRIVACY.md">Privacy policy</a>.
+        </p>
+      </section>
+
+      <footer>
+        <span>Lyrica is free. Not affiliated with YouTube or Google.</span>
+        <span>
+          <a href="https://github.com/Myo-Myint/lyrica-releases/releases">Releases</a> ·
+          <a href="https://github.com/Myo-Myint/lyrica-releases/issues/new/choose">Report a bug</a> ·
+          <a href="https://github.com/Myo-Myint/lyrica-releases/blob/main/PRIVACY.md">Privacy</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>

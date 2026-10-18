@@ -1,6 +1,6 @@
 # Privacy Policy — Lyrica and Lyrica Bridge
 
-_Last updated: October 17, 2026_
+_Last updated: October 18, 2026_
 
 Lyrica (the Mac app) and Lyrica Bridge (the Chrome extension) are free and don't collect
 data about you. There are no accounts, analytics, ads or trackers.
@@ -28,10 +28,22 @@ To find lyrics, Lyrica sends the track's **title, artist, album and duration** t
 - QQ Music's public lyrics search,
 
 and loads artwork from Google's image servers (the same images YouTube Music shows).
+
+**Romanization and translation** are off until you switch them on (the **T** key or the
+menu-bar icon → *Lyrics*). While on, the song's lyric text is sent to Google Translate's
+public endpoint (`translate.googleapis.com`) to translate it, or to romanize Japanese and
+other scripts. Korean and Chinese romanization happen on your Mac. Nothing else is sent with
+the lyrics — no account, title, or listening history.
+
+**Lyric cards** you share are made on your Mac and only go where you paste or save them.
 If you choose **Publish to LRCLIB** after syncing lyrics yourself, those lyrics and timings
 are published publicly and anonymously on lrclib.net — only after you confirm.
 
 The app also checks GitHub for new versions of Lyrica.
+
+**Copy Diagnostics** puts a short report (app and macOS versions, extension status, the
+current song and which lyrics sources were tried) on your clipboard. It is only shared if you
+paste it somewhere yourself.
 
 ## Stored on your Mac
 
