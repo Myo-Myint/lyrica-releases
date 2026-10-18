@@ -44,8 +44,11 @@ are published publicly and anonymously on lrclib.net — only after you confirm.
 The app also checks GitHub for new versions of Lyrica.
 
 **Copy Diagnostics** puts a short report (app and macOS versions, extension status, the
-current song and which lyrics sources were tried) on your clipboard. It is only shared if you
-paste it somewhere yourself.
+current song, which lyrics sources were tried and the last few problems) on your clipboard. It
+is only shared if you paste it somewhere yourself.
+
+Lyrica keeps a small log of problems (failed lookups, player errors, crashes) in
+`~/Library/Logs/Lyrica/lyrica.log`. It stays on your Mac, with your home folder shortened to `~`.
 
 ## Stored on your Mac
 
