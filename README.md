@@ -38,6 +38,8 @@ that started playing most recently.
 
 | | |
 |---|---|
+| **Settings** (players, text, timing, where lyrics show) | **⌘,**, or the sliders button in the top bar |
+| **Every keyboard shortcut** | **?**, or the ? button at the bottom right |
 | **Play / pause, ±10 s, previous / next** | Space · ← / → · ⇧← / ⇧→ |
 | **Full screen on another display** | menu-bar icon → *Show on Display*, then **F** |
 | **Cover view** (artwork as the hero) | **C**, or click the artwork |
