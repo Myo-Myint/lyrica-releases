@@ -42,6 +42,7 @@ that started playing most recently.
 | **Every keyboard shortcut** | **?**, or the ? button at the bottom right |
 | **Play / pause, ±10 s, previous / next** | Space · ← / → · ⇧← / ⇧→ |
 | **Full screen on another display** | menu-bar icon → *Show on Display*, then **F** |
+| **Karaoke** (full screen, lyrics only, extra large) | **K** (Esc to leave), or menu-bar icon → *Karaoke Mode* |
 | **Cover view** (artwork as the hero) | **C**, or click the artwork |
 | **Mini lyrics bar** over every window | **M** in Lyrica, or **⌥⌘L** from anywhere |
 | **Romanization / translation** under each line | **T** (translation language: menu-bar icon → *Lyrics* → *Translate To*) |
@@ -50,6 +51,7 @@ that started playing most recently.
 | **Share a line** as an image | right-click the line, or **S** for the current one |
 | **Wrong lyrics?** | ↻ in the top bar (or click the source name) to pick another version |
 | **Lyrics in the menu bar** | menu-bar icon → *Lyrics in Menu Bar* |
+| **Calmer view** (still background, lines fade instead of slide) | Settings → *Reduce motion* (on automatically with macOS Reduce Motion) |
 | **Choose which apps to follow** | menu-bar icon → *Follow* |
 | **Lyrics timing off?** | − / + in the top bar nudges this song; ⌥ − / + adjusts for your headphones (e.g. AirPods) |
 | **No lyrics?** | *Sync it yourself*: paste the words and tap Space as each line starts |
