@@ -51,6 +51,8 @@ that started playing most recently.
 | **Share a line** as an image | right-click the line, or **S** for the current one |
 | **Wrong lyrics?** | ↻ in the top bar (or click the source name) to pick another version |
 | **Lyrics in the menu bar** | menu-bar icon → *Lyrics in Menu Bar* |
+| **Language** (English, Español, Français, Português, မြန်မာ, ไทย, 日本語, 한국어, 简体中文, 繁體中文) | follows your Mac; change it in Settings → *Language* |
+| **What's new** after an update | shown once; reopen from the menu-bar icon → *What's New…* |
 | **Calmer view** (still background, lines fade instead of slide) | Settings → *Reduce motion* (on automatically with macOS Reduce Motion) |
 | **Choose which apps to follow** | menu-bar icon → *Follow* |
 | **Lyrics timing off?** | − / + in the top bar nudges this song; ⌥ − / + adjusts for your headphones (e.g. AirPods) |
