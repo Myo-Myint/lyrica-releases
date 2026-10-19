@@ -31,6 +31,16 @@ Free. For macOS on Apple Silicon (M1 and later) and Intel Macs.
    listing is in review (link coming soon); until then Lyrica's Setup Guide walks you
    through loading it. It works in **Chrome, Edge, Brave, Arc, Opera and Vivaldi**.
 
+### Windows (beta)
+
+1. **Download** from the [Windows beta release](../../releases/tag/v0.5.1-beta.1):
+   - `Lyrica-0.5.1-x64.exe` for almost every Windows PC (Intel or AMD)
+   - `Lyrica-0.5.1-arm64.exe` for Windows on Arm (Snapdragon laptops, Surface Pro X)
+2. Run it. It installs just for you, with no admin rights needed. The beta isn't code-signed
+   yet, so if SmartScreen says "Windows protected your PC", click **More info → Run anyway**.
+3. Spotify and Apple Music are followed through Windows' own media controls, with nothing to
+   set up. YouTube Music uses the same browser extension as on the Mac.
+
 Lyrics appear as soon as a song plays. With several players open, Lyrica follows the one
 that started playing most recently.
 
