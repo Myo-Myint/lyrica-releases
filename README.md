@@ -50,7 +50,7 @@ that started playing most recently.
 |---|---|
 | **Settings** (players, text, timing, where lyrics show) | **⌘,**, or the sliders button in the top bar |
 | **Every keyboard shortcut** | **?**, or the ? button at the bottom right |
-| **Play / pause, ±10 s, previous / next** | Space · ← / → · ⇧← / ⇧→ |
+| **Play / pause, ±10 s, previous / next** | the buttons at the bottom of the window (move the mouse), or Space · ← / → · ⇧← / ⇧→ |
 | **Full screen on another display** | menu-bar icon → *Show on Display*, then **F** |
 | **Karaoke** (full screen, lyrics only, extra large) | **K** (Esc to leave), or menu-bar icon → *Karaoke Mode* |
 | **Cover view** (artwork as the hero) | **C**, or click the artwork |
