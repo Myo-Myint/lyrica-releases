@@ -22,7 +22,7 @@ body:
     id: diagnostics
     attributes:
       label: Diagnostics
-      description: Click Lyrica's menu-bar icon → **Copy Diagnostics**, then paste here. It includes the current song's title, so remove it if you'd rather not share it.
+      description: Click Lyrique's menu-bar icon → **Copy Diagnostics**, then paste here. It includes the current song's title, so remove it if you'd rather not share it.
       render: text
     validations:
       required: true

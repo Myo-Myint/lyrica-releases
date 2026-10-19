@@ -1,4 +1,4 @@
-# Lyrica
+# Lyrique
 
 Beautiful, time-synced lyrics for **Spotify, Apple Music and YouTube Music** on your Mac:
 word-by-word highlighting,
@@ -7,41 +7,41 @@ that line themselves up with the song.
 
 Free. For macOS on Apple Silicon (M1 and later) and Intel Macs.
 
-**Website and demo:** https://myo-myint.github.io/lyrica-releases/
+**Website and demo:** https://lyrique.app/
 
 ## Install
 
 1. **Download** from the [latest release](../../releases/latest):
-   - `Lyrica-<version>-arm64.dmg` for Apple Silicon Macs (M1, M2, M3, M4 and later)
-   - `Lyrica-<version>-x64.dmg` for Intel Macs
+   - `Lyrique-<version>-arm64.dmg` for Apple Silicon Macs (M1, M2, M3, M4 and later)
+   - `Lyrique-<version>-x64.dmg` for Intel Macs
 
    Not sure which Mac you have? Apple menu → About This Mac: "Chip: Apple M…" means arm64,
    "Processor: … Intel" means x64.
-2. Open the DMG and drag **Lyrica** into **Applications**.
+2. Open the DMG and drag **Lyrique** into **Applications**.
 3. **First launch only:** this early version isn't notarized by Apple yet, so macOS asks you
    to confirm it once:
-   1. Open Lyrica from Applications. macOS says it can't verify the app — click **Done**.
-   2. Open **System Settings → Privacy & Security**, scroll down to the Lyrica message, and
+   1. Open Lyrique from Applications. macOS says it can't verify the app — click **Done**.
+   2. Open **System Settings → Privacy & Security**, scroll down to the Lyrique message, and
       click **Open Anyway**, then confirm.
 
-   After that, Lyrica opens normally.
+   After that, Lyrique opens normally.
 4. **Spotify or Apple Music:** nothing else to install. Play a song; the first time, macOS
-   asks to let Lyrica see Spotify or Music — click **Allow**.
-5. **YouTube Music:** add the browser extension _Lyrica Bridge_. Its Chrome Web Store
-   listing is in review (link coming soon); until then Lyrica's Setup Guide walks you
+   asks to let Lyrique see Spotify or Music — click **Allow**.
+5. **YouTube Music:** add the browser extension _Lyrique Bridge_. Its Chrome Web Store
+   listing is in review (link coming soon); until then Lyrique's Setup Guide walks you
    through loading it. It works in **Chrome, Edge, Brave, Arc, Opera and Vivaldi**.
 
 ### Windows (beta)
 
 1. **Download** from the [Windows beta release](../../releases/tag/v0.5.1-beta.1):
-   - `Lyrica-0.5.1-x64.exe` for almost every Windows PC (Intel or AMD)
-   - `Lyrica-0.5.1-arm64.exe` for Windows on Arm (Snapdragon laptops, Surface Pro X)
+   - `Lyrique-0.5.1-x64.exe` for almost every Windows PC (Intel or AMD)
+   - `Lyrique-0.5.1-arm64.exe` for Windows on Arm (Snapdragon laptops, Surface Pro X)
 2. Run it. It installs just for you, with no admin rights needed. The beta isn't code-signed
    yet, so if SmartScreen says "Windows protected your PC", click **More info → Run anyway**.
 3. Spotify and Apple Music are followed through Windows' own media controls, with nothing to
    set up. YouTube Music uses the same browser extension as on the Mac.
 
-Lyrics appear as soon as a song plays. With several players open, Lyrica follows the one
+Lyrics appear as soon as a song plays. With several players open, Lyrique follows the one
 that started playing most recently.
 
 ## Using it
@@ -54,7 +54,7 @@ that started playing most recently.
 | **Full screen on another display** | menu-bar icon → *Show on Display*, then **F** |
 | **Karaoke** (full screen, lyrics only, extra large) | **K** (Esc to leave), or menu-bar icon → *Karaoke Mode* |
 | **Cover view** (artwork as the hero) | **C**, or click the artwork |
-| **Mini lyrics bar** over every window | **M** in Lyrica, or **⌥⌘L** from anywhere |
+| **Mini lyrics bar** over every window | **M** in Lyrique, or **⌥⌘L** from anywhere |
 | **Romanization / translation** under each line | **T** (translation language: menu-bar icon → *Lyrics* → *Translate To*) |
 | **Text size** | **+** / **−** (or menu-bar icon → *Lyrics*) |
 | **Font** (system, rounded, serif) | menu-bar icon → *Lyrics* |
@@ -70,7 +70,7 @@ that started playing most recently.
 
 ## Updates
 
-Lyrica checks this page and tells you when a new version is out (menu-bar icon → *Update
+Lyrique checks this page and tells you when a new version is out (menu-bar icon → *Update
 Available*). Download it and replace the app in Applications.
 
 ## Problems or ideas

@@ -1,13 +1,13 @@
-# Privacy Policy — Lyrica and Lyrica Bridge
+# Privacy Policy — Lyrique and Lyrique Bridge
 
 _Last updated: October 18, 2026_
 
-Lyrica (the Mac app) and Lyrica Bridge (the Chrome extension) are free and don't collect
+Lyrique (the Mac app) and Lyrique Bridge (the Chrome extension) are free and don't collect
 data about you. There are no accounts, analytics, ads or trackers.
 
 ## What the extension reads
 
-On music.youtube.com only, Lyrica Bridge reads:
+On music.youtube.com only, Lyrique Bridge reads:
 
 - the current track's title, artist, album, artwork link and duration,
 - the playback position and whether it's playing,
@@ -17,12 +17,12 @@ On music.youtube.com only, Lyrica Bridge reads:
 
 ## Where it goes
 
-Only to the Lyrica app **on the same computer**, over a local connection (`127.0.0.1`).
+Only to the Lyrique app **on the same computer**, over a local connection (`127.0.0.1`).
 It is not sent to the developer or any third party, not sold, and not used for advertising.
 
 ## What the app sends over the internet
 
-To find lyrics, Lyrica sends the track's **title, artist, album and duration** to:
+To find lyrics, Lyrique sends the track's **title, artist, album and duration** to:
 
 - [LRCLIB](https://lrclib.net) and
 - QQ Music's public lyrics search,
@@ -41,19 +41,19 @@ the lyrics — no account, title, or listening history.
 If you choose **Publish to LRCLIB** after syncing lyrics yourself, those lyrics and timings
 are published publicly and anonymously on lrclib.net — only after you confirm.
 
-The app also checks GitHub for new versions of Lyrica.
+The app also checks GitHub for new versions of Lyrique.
 
 **Copy Diagnostics** puts a short report (app and macOS versions, extension status, the
 current song, which lyrics sources were tried and the last few problems) on your clipboard. It
 is only shared if you paste it somewhere yourself.
 
-Lyrica keeps a small log of problems (failed lookups, player errors, crashes) in
-`~/Library/Logs/Lyrica/lyrica.log`. It stays on your Mac, with your home folder shortened to `~`.
+Lyrique keeps a small log of problems (failed lookups, player errors, crashes) in
+`~/Library/Logs/Lyrique/lyrique.log`. It stays on your Mac, with your home folder shortened to `~`.
 
 ## Stored on your Mac
 
 Settings, timing offsets, cached lyrics and lyrics you synced are stored locally in
-`~/Library/Application Support/Lyrica`. Delete that folder to remove them.
+`~/Library/Application Support/Lyrique`. Delete that folder to remove them.
 
 ## Contact
 
