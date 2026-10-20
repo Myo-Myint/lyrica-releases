@@ -1,3 +1,7 @@
+# Moved
+
+The privacy policy now lives at https://github.com/Myo-Myint/lyrique/blob/main/PRIVACY.md
+
 # Privacy Policy — Lyrique and Lyrique Bridge
 
 _Last updated: October 20, 2026_
