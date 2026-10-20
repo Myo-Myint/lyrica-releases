@@ -39,9 +39,9 @@ Windows 10 and 11 in beta.
 
 ### Windows (beta)
 
-1. **Download** from the [Windows beta release](../../releases/tag/v0.6.0-beta.1):
-   - `Lyrique-0.6.0-x64.exe` for almost every Windows PC (Intel or AMD)
-   - `Lyrique-0.6.0-arm64.exe` for Windows on Arm (Snapdragon laptops, Surface Pro X)
+1. **Download** from the [Windows beta release](../../releases/tag/v0.6.1-beta.1):
+   - `Lyrique-0.6.1-x64.exe` for almost every Windows PC (Intel or AMD)
+   - `Lyrique-0.6.1-arm64.exe` for Windows on Arm (Snapdragon laptops, Surface Pro X)
 2. Run it. After a short privacy notice it installs just for you, with no admin rights needed.
    The beta isn't code-signed yet, so if SmartScreen says "Windows protected your PC", click
    **More info → Run anyway**. Signing is being set up: see the
